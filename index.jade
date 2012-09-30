@@ -6,9 +6,17 @@ html(lang="en")
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700")
 		script(src="javascripts/jquery.js")
 		script(src="javascripts/impression.js")
+		script(src="javascripts/overlay.js")
 
 	body
 		h1(class="center") Impression Kitchen Sink
+		div(class="overlay")
+			div(class="overlay-content")
+				div(class="overlay-hdr", onclick="")
+					a(class="destroy") X
+					h1(class="overlay-h1")
+				div(class="overlay-body")
+			div(class="overlay-bg", onclick="")
 		div(class="spacing")
 			button(class="button") button regular
 		div(class="spacing")
