@@ -1,0 +1,32 @@
+.button {
+	@include button;
+	font-weight:200;
+	&.red, &.warning, &.alert {
+		background:$red;
+		color:white;
+	}
+	&.blue, &.info, &.byah {
+		background:$blue;
+		color:white;
+	}
+	&.green, &.success {
+		background:$green;
+		color:white;
+	}
+}
+.tabs {
+	@include no-list;
+	width:30%;
+	margin-right:2%;
+	@include float;
+}
+.tab {
+	width:68%;
+	float:left;
+}
+.well {
+	width:100%;
+	min-height:50px;
+	background:#dedede;
+	@include box-shadow(1px 1px 1px 1px #858585 inset);
+}

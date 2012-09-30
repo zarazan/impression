@@ -1,0 +1,41 @@
+//http://viget.com/inspire/building-a-nested-responsive-grid-with-sass-compass
+
+$column_num: 12;
+$gutter: 1.875%;
+$one_col: (100% - ($gutter * ($column_num - 1))) / $column_num;
+
+
+@mixin setCols($colNum:$column_num) {
+	width: ($one_col * $colNum) + ($gutter * ($colNum - 1));
+}
+@mixin defineGrid($columns:$column_num) {
+	#{enumerate('.col', 1, $columns, '')} {
+		float: left;
+		margin-left: $gutter;
+	}
+	@for $i from 1 through $columns {
+		.col#{$i}{
+			@include setCols($i);
+		}
+	}
+}
+
+.row {
+	width:100%;
+	@include defineGrid;
+	@include clear-this;
+	margin:15px 0px;
+	min-height:20px;
+	[class*="col"]:first-child {
+		margin-left:0px;
+	}
+	.row {
+		margin:0px;
+	}
+	.row .row  {
+		margin:0px;
+	}
+	.row .row .row {
+		margin:0px;
+	}
+}

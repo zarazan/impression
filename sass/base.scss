@@ -1,0 +1,107 @@
+@include global-reset;
+$base-size: 15px 45px;
+
+button {
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+* html .clearfix{
+  height: 1%;
+  overflow: visible;
+}
+
+*+html .clearfix{
+  min-height: 1%;
+}
+.clearfix {
+	@include clear-this;
+}
+ul, ol {
+	margin-left:12px;
+}
+ul {
+	list-style-type:disc;
+	list-style-position:inside;
+}
+body {
+	width:540px;
+	margin:20px auto;
+	background:#eaeaea;
+	direction: ltr;
+	color:#000000;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility; 
+	@include body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include dom;
+	text-rendering: optimizeLegibility; 
+	line-height: 1.1;
+}
+
+h1 { 
+	font-size: ms(5);
+}
+h2 { 
+	font-size: ms(4);
+}
+h3 {
+	font-size: ms(3);
+}
+h4 {
+	font-size: ms(2);
+}
+h5 {
+	font-size: ms(1);
+}
+h6 {
+	font-size: ms(0);
+}
+
+a {
+	text-decoration:none;
+	color:$blue;
+	@include std-hover(lighten($blue,8%));
+}
+
+img {
+	width:auto;
+	max-width:100%;
+	height:auto;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+.center {
+	text-align:center;
+	margin:0 auto;
+}
+
+.left {
+	text-align:left;
+}
+.right {
+	text-align:right;
+}
+.pull-right {
+	float:right;
+}
+.pull-left {
+	float:left;
+}
+.spacing {
+	margin:20px 0px;
+}
+input {
+	vertical-align:middle;
+}
+input[type="hidden"] {
+	display:none;
+}
+.hidden {
+	display:none;
+}

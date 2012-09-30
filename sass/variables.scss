@@ -1,0 +1,128 @@
+$size-value:14px;
+$red: #EC5446;
+$blue: #3E98DF;
+$green: #67BD67;
+
+@mixin dom {
+	font-family: Georgia, serif;
+	font-weight:normal;
+}
+@mixin sub {
+	font-family: 'good_enough_regularregular', Georgia, serif;
+	font-weight:normal;
+	letter-spacing:1px;
+}
+@mixin body {
+	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	letter-spacing:0px;
+	font-weight:300;
+}
+@mixin cond {
+	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	font-weight:700;
+	text-transform:uppercase;
+}
+@mixin light {
+	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	font-weight:200;
+}
+@mixin soft-gradient($color: $blue) {
+	background-color: lighten($color, 28%);
+	@include filter-gradient(lighten($color, 28%), $color, vertical);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, lighten($color, 28%) 0%,$color 100%));
+}
+@mixin bevel($col: #381010) {
+	@include text-shadow(-1px -1px 0px $col);
+}
+@mixin emboss {
+	@include text-shadow(-1px -1px 1px #fff, 1px 1px 1px #000);
+}
+@mixin std-hover($color:inherit) {
+	@include single-transition(all, 0.2s, linear);
+	&:hover{
+		color:$color;
+	}
+}
+@mixin std-no-hover {	
+	@include single-transition(all, 0s, linear);
+}
+@mixin alt-hover {
+	color:$blue;
+	@include std-hover($light_blue);
+}
+@mixin no-list($margin:inherit) {
+	margin-left:0px;
+	list-style:none;
+	margin:$margin;
+}
+@mixin fs-xsmall($value:$size-value) {
+	font-size: $value * 0.75;
+}
+@mixin fs-small($value:$size-value) {
+	font-size: $value * 0.8;
+}
+@mixin fs-medium($value:$size-value) {
+	font-size: $value * 0.9;
+}
+@mixin fs($value:$size-value) {
+	font-size: $value;
+}
+@mixin fs-lg($value:$size-value) {
+	font-size: $value * 1.2;
+}
+@mixin fs-xlg($value:$size-value) {
+	font-size: $value * 1.4;
+	line-height:26px;
+}
+@mixin fs-xxlg($value:$size-value) {
+	font-size: $value * 1.6;
+	line-height:26px;
+}
+@mixin fs-xxxlg($value:$size-value) {
+	font-size: $value * 2.0;
+}
+@mixin fs-xxxxlg($value:$size-value) {
+	font-size: $value * 2.4;
+}
+@mixin button {
+	@include border-radius(24px);
+	background:#f2f2f2;
+	position:relative;
+	padding:8px 28px;
+	color:black;
+	@include fs;
+	@include body;
+	@include box-shadow(0px 1px 1px 1px #555);
+	&:before {
+		content:'';
+		width:100%;
+		height:100%;
+		bottom:-8px;
+		left:-7px;
+		position:absolute;
+		z-index:-1;
+		padding:7px;
+		@include border-radius(24px);
+		@include box-shadow( 0px 3px 6px 0px rgba(0,0,0,0.25) inset, 0px 8px 18px 0px rgba(0,0,0,0.12) inset);
+	}
+	&:hover {
+		cursor:pointer;
+		@include box-shadow(0px 1px 1px 1px #555, 0px 0px 45px 5px rgba(0,0,0,0.04) inset);
+	}
+	&:active {
+		@include box-shadow(0px 2px 1px 0px #777 inset);
+	}
+}
+@mixin clear-this {
+	clear:both;
+	&:after{
+		clear: both;
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+		font-size: 0;
+	}
+}
+
