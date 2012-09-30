@@ -5,6 +5,7 @@ button {
 	border:0;
 	margin:0;
 	padding:0;
+	max-width:90%;
 }
 
 * html .clearfix{
@@ -26,7 +27,7 @@ ul {
 	list-style-position:inside;
 }
 body {
-	width:540px;
+	width:640px;
 	margin:20px auto;
 	background:#eaeaea;
 	direction: ltr;
