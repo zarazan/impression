@@ -1,3 +1,5 @@
 *.scssc
 *.sublime-workspace
 *.sublime-project
+sublime/
+impression.min.js

@@ -15,14 +15,45 @@
 	}
 }
 .tabs {
-	@include no-list;
-	width:30%;
-	margin-right:2%;
-	@include float;
-}
-.tab {
-	width:68%;
-	float:left;
+	margin:20px 0px;
+	@include clear-this;
+	height:150px;
+	min-height:150px;
+	background:#f9f9f9;
+	padding:5px;
+	@include std-sizing;
+	@include border-radius(6px);
+	ul.nav {
+		@include no-list;
+		width:30%;
+		@include float;
+		li {
+			@include border-radius(2px);
+			@include cond;
+			vertical-align:middle;
+			padding:12px 7px;
+			cursor:pointer;
+			a {
+				color:black;
+				@include std-hover($blue);
+			}
+			&.active {
+				border-left:4px solid darken($blue,14%);
+				background:lighten($blue, 41%);
+			}
+		}
+	}
+	.tab {
+		width:70%;
+		@include float;
+		height:100%;
+		padding:8px;
+		@include std-sizing;
+		@include border-radius(4px);
+		&.active {
+			background:lighten($blue, 41%);
+		}
+	}
 }
 .well {
 	width:100%;

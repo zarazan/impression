@@ -310,17 +310,75 @@ input[type="hidden"] {
     color: white; }
 
 .tabs {
-  margin-left: 0px;
-  list-style: none;
-  margin: inherit;
-  width: 30%;
-  margin-right: 2%;
-  display: inline;
-  float: left; }
-
-.tab {
-  width: 68%;
-  float: left; }
+  margin: 20px 0px;
+  clear: both;
+  height: 150px;
+  min-height: 150px;
+  background: #f9f9f9;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(https://raw.github.com/Schepp/box-sizing-polyfill/master/boxsizing.htc);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px; }
+  .tabs:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0; }
+  .tabs ul.nav {
+    margin-left: 0px;
+    list-style: none;
+    margin: inherit;
+    width: 30%;
+    display: inline;
+    float: left; }
+    .tabs ul.nav li {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+      font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      vertical-align: middle;
+      padding: 12px 7px;
+      cursor: pointer; }
+      .tabs ul.nav li a {
+        color: black;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear; }
+        .tabs ul.nav li a:hover {
+          color: #3e98df; }
+      .tabs ul.nav li.active {
+        border-left: 4px solid #1e74b7;
+        background: #f1f8fd; }
+  .tabs .tab {
+    width: 70%;
+    display: inline;
+    float: left;
+    height: 100%;
+    padding: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url(https://raw.github.com/Schepp/box-sizing-polyfill/master/boxsizing.htc);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px; }
+    .tabs .tab.active {
+      background: #f1f8fd; }
 
 .well {
   width: 100%;

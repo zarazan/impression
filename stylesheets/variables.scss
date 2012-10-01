@@ -85,6 +85,11 @@ $green: #67BD67;
 @mixin fs-xxxxlg($value:$size-value) {
 	font-size: $value * 2.4;
 }
+@mixin std-sizing($box-sizing:border-box) {
+	//box-sizing IE<8 ...! https://github.com/Schepp/box-sizing-polyfill
+	@include box-sizing($box-sizing);
+	*behavior: url(https://raw.github.com/Schepp/box-sizing-polyfill/master/boxsizing.htc);
+}
 @mixin button {
 	@include border-radius(24px);
 	background:#f2f2f2;
