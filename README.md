@@ -1,6 +1,13 @@
-# Impression
+  # Impression
 
-Make an impression.
+Make an impression. A framework designed by marketers for marketers
+
+## Requirements
+
+* [Sass](https://github.com/nex3/sass)
+* [Compass](https://github.com/chriseppstein/compass)
+* [modular-scale](https://github.com/scottkellum/modular-scale)
+* [Jade](http://jade-lang.com/) *(Optional)*
 
 ## Team
 
@@ -10,4 +17,5 @@ John Resman, Interactive Director, [Brockton Creative Group](http://brocktoncg.c
 
 Tim "Jackson Miller" Shedor, Developer, [Brockton Creative Group](http://github.com/tshedor)
 
-This project requires [modular-scale](https://github.com/scottkellum/modular-scale), a Sass plugin. [Jade](http://jade-lang.com/) is also a bonus.
+## License and Copyright ##
+Copyright 2012 Brockton Creative Group
